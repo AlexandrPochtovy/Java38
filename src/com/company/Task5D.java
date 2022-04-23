@@ -1,5 +1,5 @@
 package com.company;
-
+/*Ввести пароль из командной строки и сравнить его со строкой-образцом.*/
 import java.util.Scanner;
 
 public class Task5D {

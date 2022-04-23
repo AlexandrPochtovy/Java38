@@ -1,5 +1,6 @@
 package com.company;
-
+/*Отобразить в окне консоли аргументы командной строки в обратном порядке.
+*/
 import java.util.Scanner;
 
 public class Task5B {

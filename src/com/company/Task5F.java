@@ -1,5 +1,6 @@
 package com.company;
-
+/*Вывести фамилию разработчика, дату и время начала выполнения программы, а также дату и время завершения выполнения.
+*/
 import java.util.Scanner;
 import java.util.Date;
 

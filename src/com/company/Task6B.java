@@ -1,5 +1,7 @@
 package com.company;
-
+/*Ввести с консоли n целых чисел. На консоль вывести:
+Наибольшее и наименьшее число.
+*/
 import java.util.Scanner;
 
 public class Task6B {

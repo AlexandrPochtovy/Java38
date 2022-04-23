@@ -1,5 +1,6 @@
 package com.company;
-
+/*Вывести заданное количество случайных чисел с переходом и без перехода на новую строку.
+*/
 import java.util.Scanner;
 import java.lang.Math;
 

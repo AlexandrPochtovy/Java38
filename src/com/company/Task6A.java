@@ -1,5 +1,7 @@
 package com.company;
-
+/*Ввести с консоли n целых чисел. На консоль вывести:
+Четные и нечетные числа.
+*/
 import java.util.Scanner;
 
 public class Task6A {

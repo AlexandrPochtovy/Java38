@@ -1,5 +1,7 @@
 package com.company;
-
+/*Ввести с консоли n целых чисел. На консоль вывести:
+Отсортированные числа в порядке возрастания и убывания.
+ */
 import java.util.Scanner;
 import java.util.*;
 

@@ -1,5 +1,7 @@
 package com.company;
-
+/*Ввести с консоли n целых чисел. На консоль вывести:
+Числа, которые делятся на 3 или на 9.
+*/
 import java.util.Scanner;
 
 public class Task6C {
