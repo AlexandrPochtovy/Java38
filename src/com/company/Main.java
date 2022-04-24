@@ -3,6 +3,6 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-	// initial main branch
+	// initial branch Scool project
     }
 }
