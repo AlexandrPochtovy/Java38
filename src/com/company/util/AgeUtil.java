@@ -8,21 +8,20 @@ public class AgeUtil {
 
     public static void checkAge(int age) {
         try {
-            if (age < 16) {
-                throw new YangExeption("маленький возраст");
-            }
-            if (age > 80) {
-                throw new OldExeption("Нереальный возраст");
-            }
-        } catch (Exception ye) {
-            ye.printStackTrace();
-            System.out.println(ye.getMessage());
+            checkAgeYang(age);
+            checkAgeOld(age);
+        } catch (AgeExeption e) {
+            e.printStackTrace();
         }
-        finally {
-            System.out.println("конец");
+    }
+    private static void checkAgeYang(int age) throws YangExeption {
+        if (age < 16) {
+            throw new YangExeption("слишком юный падаван");
         }
-
-
-
+    }
+    private static void checkAgeOld(int age) throws OldExeption {
+        if (age > 80) {
+            throw new OldExeption("слишком мудрый старик");
+        }
     }
 }
