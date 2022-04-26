@@ -1,5 +1,8 @@
 package com.company;
 
+import com.company.udt.Address;
+import com.company.udt.Person;
+
 public class Teacher extends Person {
     private static int count;
     private double money;
@@ -45,5 +48,9 @@ public class Teacher extends Person {
     }
     public double salary(int day, double koef) {
         return day * studentCount * koef;
+    }
+
+    public static int getCount() {
+        return count;
     }
 }

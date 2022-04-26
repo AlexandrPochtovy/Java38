@@ -1,5 +1,8 @@
 package com.company;
 
+import com.company.udt.Address;
+import com.company.udt.Person;
+
 public class Student extends Person {
     private static int count;
 
@@ -13,7 +16,7 @@ public class Student extends Person {
         ++count;
     }
 
-    public int getCount() {
+    public static int getCount() {
         return count;
     }
 
