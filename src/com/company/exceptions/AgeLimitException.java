@@ -1,5 +1,7 @@
-package com.company.exeptions;
+package com.company.exceptions;
 
-public class AgeLimitExeption extends Exeption {
-
+public class AgeLimitException extends Exception {
+    public AgeLimitException(String message) {
+        super(message);
+    }
 }

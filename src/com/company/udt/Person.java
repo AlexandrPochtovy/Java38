@@ -1,5 +1,8 @@
 package com.company.udt;
 
+import com.company.exceptions.AgeLimitException;
+import com.company.exceptions.AgeUtil;
+
 public abstract class Person {
     private String name;
     private String lastname;
@@ -7,17 +10,31 @@ public abstract class Person {
     private Sex sex;
     private Address addr;
 //===================================================================================
+public Person(String name, String lastname) {
+    this.name = name;
+    this.lastname = lastname;
+    this.age = 0;
+    this.addr = null;
+}
     public Person(String name, String lastname, int age) {
         this.name = name;
         this.lastname = lastname;
-        this.age = age;
+        try {
+            setAge(age);
+        } catch (AgeLimitException e) {
+            e.printStackTrace();
+        }
         this.addr = null;
     }
 
     public Person(String name, String lastname, int age, Address addr) {
         this.name = name;
         this.lastname = lastname;
-        this.age = age;
+        try {
+            setAge(age);
+        } catch (AgeLimitException e) {
+            e.printStackTrace();
+        }
         this.addr = addr;
     }
 //===================================================================================
@@ -41,8 +58,15 @@ public abstract class Person {
         return age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setAge(int age) throws AgeLimitException {
+        try {
+            AgeUtil.checkAge(age);
+            this.age = age;
+        }
+        catch (AgeLimitException e){
+            System.out.println(e.getMessage());
+            this.age = 0;
+        }
     }
 
     public Address getAddr() {
