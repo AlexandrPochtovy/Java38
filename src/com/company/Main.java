@@ -1,6 +1,7 @@
 package com.company;
 
 import com.company.udt.Address;
+import com.company.udt.TeacherToMetodist;
 
 public class Main {
 
@@ -13,6 +14,7 @@ public class Main {
         Teacher teacher = new Teacher("Victor", "Petrov", 32,
                                         new Address("Minsk", "Nemiga", 4, 12));
 
-
+        TeacherToMetodist<Teacher, Metodist> conv = x -> new Metodist(x.getName(), x.getLastname(), x.getAge());
+        Metodist met1 = conv.convert(teacher);
     }
 }
