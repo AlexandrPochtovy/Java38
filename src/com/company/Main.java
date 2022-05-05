@@ -1,15 +1,16 @@
 package com.company;
 
-import com.company.exeption.YangExeption;
-import com.company.util.AgeUtil;
-
+import com.company.exception.CharException;
+import com.company.util.PassValidate;
 
 public class Main {
 
     public static void main(String[] args) {
 	// feature Lesson 9 branch
-        AgeUtil.checkAge(1122);
-
+        String login = "hsdfdf";
+        String pass = "qwerty";
+        String confirmPAss = "qwerty";
+        System.out.print(PassValidate.passCheck(login, pass, confirmPAss));
     }
 
 }

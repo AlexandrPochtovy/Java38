@@ -1,0 +1,18 @@
+package com.company.util;
+
+import com.company.exception.CharException;
+
+public class StringCheck {
+    private static final String  strLow = "abcdefghijklmnopqrstuvwxyz";
+    private static final String strUp = "ABSDEFGHIJKLMNOPQRSTUVWXYZ";
+    private static final String dig = "0123456789_";
+
+    public static void checkMask(String value, final String message) throws CharException {
+        int len = value.length();
+        for (int i = 0; i < len; i++) {
+            if (i == 2) {
+                throw new CharException("wrong ".concat(message));
+            }
+        }
+    }
+}
