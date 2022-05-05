@@ -1,4 +1,4 @@
-package com.company.udt;
+package com.company.util;
 
 @FunctionalInterface
 public interface TeacherToMetodist <T, N > {

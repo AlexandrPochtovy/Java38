@@ -1,7 +1,6 @@
 package com.company;
 
 import com.company.udt.Address;
-import com.company.udt.TeacherToMetodist;
 
 import java.util.ArrayList;
 

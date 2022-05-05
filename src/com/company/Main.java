@@ -1,7 +1,7 @@
 package com.company;
 
 import com.company.udt.Address;
-import com.company.udt.TeacherToMetodist;
+import com.company.util.TeacherToMetodist;
 
 public class Main {
 
