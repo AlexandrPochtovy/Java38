@@ -1,18 +1,16 @@
 package com.company;
 
+import com.company.base.Box;
 import com.company.model.Car;
 import com.company.model.Ship;
 import com.company.util.MaxPowerCompare;
-
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
 	// initial Lesson 11 class branch
-
+/*
         Comparator powerComp = new MaxPowerCompare();
         Car car1 = new Car("Audi", "red", 1120);
         Car car2 = new Car("Opel", "green", 1010);
@@ -26,9 +24,9 @@ public class Main {
             add(car4);
             add(car5);
         }};
-        listCar.stream().sorted(powerComp).forEach(car -> {
-                System.out.println(car);
-                int c = car.hashCode();
+        listCar.stream().sorted(powerComp).forEach(step -> {
+                System.out.println(step);
+                int c = step.hashCode();
          });
 
         ArrayList<Ship> armada = new ArrayList<Ship>(){{
@@ -42,9 +40,28 @@ public class Main {
 
         armada.stream().sorted().forEach(step ->
                 System.out.println(step.name));
+
+        Collections.sort(listCar, powerComp);
+
+ */
+        Box<String> myBox = new Box<String>("peppa");
+        System.out.println(myBox.getT());
+
+        Box<Integer> intBox = new Box<>(45);
+        System.out.println(intBox.getT());
+
+        ArrayList<Box> boxes = new ArrayList<Box>(){{
+            add(myBox);
+            add(intBox);
+            add(new Box(11));
+            add(new Box("wer"));
+
+        }};
+        boxes.stream().filter(b -> b.getT().equals("Hello")).forEach(step -> {
+            System.out.println(step);
+            boxes.stream().iterator().next();
+        });
+
     }
-
-
-
 
 }
