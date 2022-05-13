@@ -6,6 +6,11 @@ import com.company.udt.Person;
 public class Student extends Person {
     private static int count;
 
+    public Student(String name, String lastname) {
+        super(name, lastname);
+        ++count;
+    }
+
     public Student(String name, String lastname, int age) {
         super(name, lastname, age);
         ++count;
