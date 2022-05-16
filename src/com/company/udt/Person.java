@@ -3,7 +3,7 @@ package com.company.udt;
 import com.company.exceptions.AgeLimitException;
 import com.company.exceptions.AgeUtil;
 
-public abstract class Person {
+public abstract class Person implements Comparable<Person>{
     private String name;
     private String lastname;
     private int age;
@@ -84,5 +84,25 @@ public Person(String name, String lastname) {
                         " age " + age + " " +
                         addr.toString();
         return s;
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        int res;
+        res = this.name.compareTo(o.getName());
+        if (res != 0) {
+            return res;
+        } else {
+            res = this.lastname.compareTo(o.getLastname());
+            if (res != 0) {
+                return res;
+            } else {
+                if (this.age > o.getAge()) {
+                    return 1;
+                } else if (this.age < o.getAge()) {
+                    return -1;
+                } else return 0;
+            }
+        }
     }
 }
