@@ -1,14 +1,20 @@
-package com.company;
+package com.company.peoples;
 
 import com.company.udt.Address;
+import com.company.udt.Person;
 
 import java.util.ArrayList;
 
-public class Metodist extends Teacher {
+public class Metodist extends Person {
     private static int count;
     private ArrayList<Teacher> teachers;
 //===================================================================================
 
+    public Metodist(String name, String lastname) {
+        super(name, lastname);
+        this.teachers = teachers;
+        this.teachers = new ArrayList<Teacher>();
+    }
 
     public Metodist(String name, String lastname, int age) {
         super(name, lastname, age);
@@ -20,11 +26,7 @@ public class Metodist extends Teacher {
         this.teachers = new ArrayList<Teacher>();
     }
 
-    public Metodist(String name, String lastname, int age, int studentCount) {
-        super(name, lastname, age, studentCount);
-        this.teachers = new ArrayList<Teacher>();
-    }
-    //=================================================================================
+//=================================================================================
 
     public static int getCount() {
         return count;

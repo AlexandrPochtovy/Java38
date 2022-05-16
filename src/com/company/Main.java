@@ -1,12 +1,16 @@
 package com.company;
 
-import com.company.exceptions.AgeLimitException;
+import com.company.peoples.Metodist;
+import com.company.peoples.Student;
+import com.company.peoples.Teacher;
 import com.company.udt.Address;
 import com.company.util.TeacherToMetodist;
 
 public class Main {
 
     public static void main(String[] args) {
+
+
 	//Scool project branch feature add first Classes
         Address studAddr = new Address("Minsk", "Pushkina pr", 17, 2);
 
@@ -18,9 +22,11 @@ public class Main {
         GroupEdu group114 = new GroupEdu("Business model", 1, teacher, 25);
         group114.addStudent(stud1);
         group114.addStudent(stud2);
-        //group114.AddressChange(stud1, studAddr);
+        group114.AddressChange(stud1, studAddr);
 
-        //TeacherToMetodist<Teacher, Metodist> conv = x -> new Metodist(x.getName(), x.getLastname(), x.getAge());
-        //Metodist met1 = conv.convert(teacher);
+        TeacherToMetodist<Teacher, Metodist> conv;
+        conv = x -> new Metodist(x.getName(), x.getLastname(), x.getAge(), x.getAddr());
+        Metodist met1 = conv.convert(teacher);
+
     }
 }

@@ -7,6 +7,4 @@ public interface TeacherToMetodist <T, N > {
     static <T> boolean nullPtrCheck(T t) {
         return t != null;
     }
-
-
 }

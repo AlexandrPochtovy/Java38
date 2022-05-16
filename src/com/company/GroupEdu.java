@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.peoples.Student;
+import com.company.peoples.Teacher;
 import com.company.udt.Address;
 import com.company.udt.Person;
 import java.util.ArrayList;

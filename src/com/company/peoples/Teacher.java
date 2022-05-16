@@ -1,4 +1,4 @@
-package com.company;
+package com.company.peoples;
 
 import com.company.udt.Address;
 import com.company.udt.Person;
