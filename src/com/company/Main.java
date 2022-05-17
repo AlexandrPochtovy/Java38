@@ -1,33 +1,25 @@
 package com.company;
 
-import java.io.FileInputStream;
-import java.io.IOException;
+import java.io.*;
 
 public class Main {
 
     public static void main(String[] args) {
-	// initial Lesson 11 class branch
+	// initial Lesson 13 class branch
+        FileReader fileReader = null;
+        FileWriter fileWriter = null;
         try {
-            FileInputStream fileInputStream = new FileInputStream("file.txt");
+            fileReader = new FileReader("file.txt");
+            fileWriter = new FileWriter("out2.txt");
             int a;
-            String name = "";
-            while ((a = fileInputStream.read()) != -1) {
-                name += (char)a;
+            while ((a = fileReader.read()) != -1) {
+                fileWriter.append((char)a);
+                System.out.print((char)a);
             }
-
-            System.out.println(name);
-            String[] m = name.split("\n");
-            for (String step : m) {
-                String[] nik = step.split(" ");
-                System.out.println("имя ".concat(nik[0]));
-            }
-            //System.out.println("имя ".concat(m[0]));
-            //System.out.println("фамилия ".concat(m[1]));
-
-
+            fileReader.close();
+            fileWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
 }
