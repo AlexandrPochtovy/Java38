@@ -31,53 +31,46 @@ public class Main {
 
         //парсим список студентов
         ArrayList<String> dataString = new ArrayList<String>();
-        try {
             dataString = FileParser.ListParser(studentsPatch);//создан массив строк из файла
             for (String value : dataString) {
                 /*теперь каждую строку из массива разбили на массив отдельных строк
-                * и каждый элемент-строку занесли в данные конструктора студента*/
+                 * и каждый элемент-строку занесли в данные конструктора студента*/
                 String[] tempStr = FileParser.StringParser(value);
                 Student tempSt = new Student(tempStr[0],                                     //name
-                                            tempStr[1],                                     //lastname
-                                            Integer.parseInt(tempStr[2], 10),          //age
-                                            new Address(tempStr[3],                         //city
-                                                        tempStr[4],                         //street
-                                                    Integer.parseInt(tempStr[5], 10),  //building
-                                                    Integer.parseInt(tempStr[6], 10)   //flat
-                                            ));
+                        tempStr[1],                                     //lastname
+                        Integer.parseInt(tempStr[2], 10),          //age
+                        new Address(tempStr[3],                         //city
+                                tempStr[4],                         //street
+                                Integer.parseInt(tempStr[5], 10),  //building
+                                Integer.parseInt(tempStr[6], 10)   //flat
+                        ));
                 groupOne.addStudent(tempSt);//студентов распарсили, заполняем группу
                 groupTwo.addStudent(tempSt);//студентов распарсили, заполняем группу
             }
-        } catch (FileCheckException e) {
-            System.out.println(e.getMessage());//e.printStackTrace();
-        }
-
         dataString = new ArrayList<String>();
-        try {
             dataString = FileParser.ListParser(teachersPatch);
             for (String value : dataString) {
                 String[] tempStr = FileParser.StringParser(value);
                 listTeacher.add(new Teacher(tempStr[0],                                 //name
-                                            tempStr[1],                                 //lastname
-                                            Integer.parseInt(tempStr[2]),               //age
-                                            new Address(tempStr[3],                     //city
-                                                        tempStr[4],                     //street
-                                                        Integer.parseInt(tempStr[5]),   //building
-                                                        Integer.parseInt(tempStr[6])    //flat
-                                            )));
+                        tempStr[1],                                 //lastname
+                        Integer.parseInt(tempStr[2]),               //age
+                        new Address(tempStr[3],                     //city
+                                tempStr[4],                     //street
+                                Integer.parseInt(tempStr[5]),   //building
+                                Integer.parseInt(tempStr[6])    //flat
+                        )));
             }
-        } catch (FileCheckException e) {
-            System.out.println(e.getMessage());//e.printStackTrace();
-        }
-        groupOne.setTeacher(listTeacher.get(0));//куратор группы 1 задан
-        groupTwo.setTeacher(listTeacher.get(1));//куратор группы 2 задан
 
-        if (TeacherToMetodist.nullPtrCheck(listTeacher.get(0))) {
+        if (listTeacher.size() >=2 ) {
+            groupOne.setTeacher(listTeacher.get(0));//куратор группы 1 задан
+            groupTwo.setTeacher(listTeacher.get(1));//куратор группы 2 задан
             senior = convTeachToMet.convert(listTeacher.get(0));//конвертер через лямбду выше
+            senior.setAllTeachers(listTeacher);
         }
-        senior.setAllTeachers(listTeacher);
         if (TeacherToMetodist.nullPtrCheck(senior)) {
             teacherOne = convMetToTeach.convert(senior);//конвертер через лямбду выше
         }
+
+
     }
 }
