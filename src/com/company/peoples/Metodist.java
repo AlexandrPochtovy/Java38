@@ -12,7 +12,6 @@ public class Metodist extends Person {
 
     public Metodist(String name, String lastname) {
         super(name, lastname);
-        this.teachers = teachers;
         this.teachers = new ArrayList<Teacher>();
     }
 
@@ -26,6 +25,21 @@ public class Metodist extends Person {
         this.teachers = new ArrayList<Teacher>();
     }
 
+    public ArrayList<Teacher> getAllTeachers() {
+        return teachers;
+    }
+
+    public void setAllTeachers(ArrayList<Teacher> teachers) {
+        this.teachers = teachers;
+    }
+
+    public void addTeacher(Teacher teachers) {
+        this.teachers.add(teachers);
+    }
+
+    public Teacher getTeacher(int index) {
+        return teachers.get(index);
+    }
 //=================================================================================
 
     public static int getCount() {
