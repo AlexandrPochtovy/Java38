@@ -1,7 +1,7 @@
-package com.company.udt;
+package com.company.userdatatype;
 
 import com.company.exceptions.AgeLimitException;
-import com.company.exceptions.AgeUtil;
+import com.company.util.AgeUtil;
 
 public abstract class Person implements Comparable<Person>{
     private String name;

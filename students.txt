@@ -1,0 +1,5 @@
+Victor Sergeev 18 Minsk Vaneeva 12 241
+Petr Mishenko 18 Minsk Pushkina 11 23
+Ivan Ivanov 19 Grodno Lenina 2 42
+Maria Sidorova 18 Borisov Kosmonavtov 5 188
+Ilya Griboedov 19 Vitebsk Losieva 9 131

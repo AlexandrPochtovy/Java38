@@ -1,7 +1,7 @@
 package com.company.peoples;
 
-import com.company.udt.Address;
-import com.company.udt.Person;
+import com.company.userdatatype.Address;
+import com.company.userdatatype.Person;
 
 public class Teacher extends Person {
     private static int count;

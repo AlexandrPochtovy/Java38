@@ -2,14 +2,14 @@ package com.company;
 
 import com.company.peoples.Student;
 import com.company.peoples.Teacher;
-import com.company.udt.Address;
-import com.company.udt.Person;
+import com.company.userdatatype.Address;
+import com.company.userdatatype.Person;
 import java.util.ArrayList;
 
 public class GroupEdu {
     private String title;
     private int course;
-    private Teacher curator;
+    private Teacher teacher;
     private ArrayList<Student> students;
 
     //конструктор   -------------------------------------------------------------------------
@@ -18,14 +18,14 @@ public class GroupEdu {
         this.title = title;
         this.course = course;
         this.students = new ArrayList<Student>();
-        this.curator = null;
+        this.teacher = null;
     }
 
     //группа c куратором без студента
     public GroupEdu(String title, int course, Teacher teacher) {
         this.title = title;
         this.course = course;
-        this.curator = teacher;
+        this.teacher = teacher;
         this.students = new ArrayList<Student>();
     }
 
@@ -34,14 +34,14 @@ public class GroupEdu {
         this.title = title;
         this.course = course;
         this.students = new ArrayList<Student>(studentsSize);
-        this.curator = null;
+        this.teacher = null;
     }
 
     //группа создается полностью
     public GroupEdu(String title, int course, Teacher curator, int studentsSize) {
         this.title = title;
         this.course = course;
-        this.curator = curator;
+        this.teacher = curator;
         this.students = new ArrayList<Student>(studentsSize);
     }
 
@@ -66,12 +66,12 @@ public class GroupEdu {
     }
 
     //функции для куратора  -------------------------------------------------------------
-    public Teacher getCurator() {
-        return curator;
+    public Teacher getTeacher() {
+        return teacher;
     }
 
-    public void setCurator(Teacher curator) {
-        this.curator = curator;
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
     }
     //функции для массива студентов  -------------------------------------------------------------
 

@@ -1,6 +1,6 @@
 package com.company.util;
 
-import com.company.udt.Person;
+import com.company.userdatatype.Person;
 
 import java.util.Comparator;
 

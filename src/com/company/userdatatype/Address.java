@@ -1,4 +1,4 @@
-package com.company.udt;
+package com.company.userdatatype;
 
 public class Address {
     private String city;
