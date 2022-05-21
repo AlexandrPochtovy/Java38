@@ -1,4 +1,4 @@
-package com.company.userdatatype;
+package com.company.model;
 
 public enum Sex {
     MALE,

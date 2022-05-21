@@ -1,9 +1,9 @@
-package com.company;
+package com.company.model;
 
-import com.company.peoples.Student;
-import com.company.peoples.Teacher;
-import com.company.userdatatype.Address;
-import com.company.userdatatype.Person;
+import com.company.model.Student;
+import com.company.model.Teacher;
+import com.company.model.Address;
+import com.company.base.Person;
 import java.util.ArrayList;
 
 public class GroupEdu {

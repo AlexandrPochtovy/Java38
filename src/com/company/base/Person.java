@@ -1,6 +1,8 @@
-package com.company.userdatatype;
+package com.company.base;
 
-import com.company.exceptions.AgeLimitException;
+import com.company.exception.AgeLimitException;
+import com.company.model.Address;
+import com.company.model.Sex;
 import com.company.util.AgeUtil;
 
 public abstract class Person implements Comparable<Person>{

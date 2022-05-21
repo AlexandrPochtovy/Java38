@@ -1,7 +1,7 @@
-package com.company.peoples;
+package com.company.model;
 
-import com.company.userdatatype.Address;
-import com.company.userdatatype.Person;
+import com.company.model.Address;
+import com.company.base.Person;
 
 public class Teacher extends Person {
     private static int count;

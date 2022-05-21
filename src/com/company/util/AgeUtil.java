@@ -1,6 +1,6 @@
 package com.company.util;
 
-import com.company.exceptions.AgeLimitException;
+import com.company.exception.AgeLimitException;
 
 public class AgeUtil {
     public static final int ageLow = 0;

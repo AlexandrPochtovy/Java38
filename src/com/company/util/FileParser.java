@@ -1,6 +1,6 @@
 package com.company.util;
 
-import com.company.exceptions.FileCheckException;
+import com.company.exception.FileCheckException;
 
 import java.io.FileInputStream;
 import java.io.IOException;

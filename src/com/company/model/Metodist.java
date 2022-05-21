@@ -1,7 +1,6 @@
-package com.company.peoples;
+package com.company.model;
 
-import com.company.userdatatype.Address;
-import com.company.userdatatype.Person;
+import com.company.base.Person;
 
 import java.util.ArrayList;
 
