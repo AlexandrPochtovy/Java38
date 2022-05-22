@@ -4,10 +4,9 @@ import com.company.model.Address;
 import com.company.base.Person;
 
 public class Teacher extends Person {
-    private static int count;
-    private double money;
-    private int studentCount;
-//===================================================================================
+    private static int count;//счетчик созданных объектов
+    private double money;   //количество денег
+    private int studentCount;//число обучаемых студентов, используется в расчете ЗП
 
     public Teacher(String name, String lastname, int age) {
         super(name, lastname, age);
@@ -36,7 +35,22 @@ public class Teacher extends Person {
         ++count;
         money = 0;//нет денег
     }
-    //=================================================================================
+
+    public Teacher(String name, String lastname, int age, Address addr, double money, int studentCount) {
+        super(name, lastname, age, addr);
+        this.studentCount = studentCount;
+        this.money = money;
+        ++count;
+    }
+
+    public int getStudentCount() {
+        return studentCount;
+    }
+
+    public void setStudentCount(int studentCount) {
+        this.studentCount = studentCount;
+    }
+
     public double getMoney() {
         return money;
     }

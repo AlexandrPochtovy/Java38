@@ -4,12 +4,7 @@ import com.company.model.Address;
 import com.company.base.Person;
 
 public class Student extends Person {
-    private static int count;
-
-    public Student(String name, String lastname) {
-        super(name, lastname);
-        ++count;
-    }
+    private static int count;//счетчик созданных объектов
 
     public Student(String name, String lastname, int age) {
         super(name, lastname, age);

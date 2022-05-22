@@ -1,6 +1,10 @@
 package com.company.util;
 
+import com.company.base.Person;
 import com.company.exception.FileCheckException;
+import com.company.model.Address;
+import com.company.model.Student;
+import com.company.model.Teacher;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -54,4 +58,29 @@ public class FileParser {
     public static String[] StringParser(String data) {
         return data.replaceAll("[\\W]", " ").split(" ");
     }
+
+    public static Student CreateStudent(String[] value) {
+        return new Student(value[0],                                     //name
+                value[1],                                     //lastname
+                Integer.valueOf(value[2], 10),          //age
+                new Address(value[3],                         //city
+                        value[4],                         //street
+                        Integer.valueOf(value[5], 10),  //building
+                        Integer.valueOf(value[6], 10)   //flat
+                )
+        );
+    }
+
+    public static Teacher CreateTeacher(String[] value) {
+        return new Teacher(value[0],                                     //name
+                value[1],                                     //lastname
+                Integer.valueOf(value[2], 10),          //age
+                new Address(value[3],                         //city
+                        value[4],                         //street
+                        Integer.valueOf(value[5], 10),  //building
+                        Integer.valueOf(value[6], 10)   //flat
+                )
+        );
+    }
+
 }

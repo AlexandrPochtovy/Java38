@@ -3,6 +3,7 @@ package com.company.base;
 import com.company.exception.AgeLimitException;
 import com.company.model.Address;
 import com.company.model.Sex;
+import com.company.model.WorkState;
 import com.company.util.AgeUtil;
 
 public abstract class Person implements Comparable<Person>{
@@ -10,21 +11,16 @@ public abstract class Person implements Comparable<Person>{
     private String lastname;
     private int age;
     private Sex sex;
+    private WorkState status;//TODO
     private Address addr;
 //===================================================================================
-public Person(String name, String lastname) {
-    this.name = name;
-    this.lastname = lastname;
-    this.age = 0;
-    this.addr = null;
-}
     public Person(String name, String lastname, int age) {
         this.name = name;
         this.lastname = lastname;
         try {
             setAge(age);
         } catch (AgeLimitException e) {
-            e.printStackTrace();
+            System.out.print(e.getMessage());//e.printStackTrace();
         }
         this.addr = null;
     }
@@ -35,7 +31,7 @@ public Person(String name, String lastname) {
         try {
             setAge(age);
         } catch (AgeLimitException e) {
-            e.printStackTrace();
+            System.out.print(e.getMessage());//e.printStackTrace();
         }
         this.addr = addr;
     }
@@ -67,7 +63,6 @@ public Person(String name, String lastname) {
         }
         catch (AgeLimitException e){
             System.out.println(e.getMessage());
-            this.age = 0;
         }
     }
 

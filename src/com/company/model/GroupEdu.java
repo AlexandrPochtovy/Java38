@@ -45,7 +45,13 @@ public class GroupEdu {
         this.students = new ArrayList<Student>(studentsSize);
     }
 
-    //функции для названия группы  -------------------------------------------------------------
+    public GroupEdu(String title, int course, Teacher teacher, ArrayList<Student> students) {
+        this.title = title;
+        this.course = course;
+        this.teacher = teacher;
+        this.students = students;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -54,7 +60,6 @@ public class GroupEdu {
         this.title = title;
     }
 
-    //функции для номера курса  -------------------------------------------------------------
     public int getCourse() {
         return course;
     }
@@ -62,10 +67,9 @@ public class GroupEdu {
     public void setCourse(int course) {
         if (course > 0) {
             this.course = course;
-        }
+        } else this.course = 1;//при неверном вводе задаем первый курс
     }
 
-    //функции для куратора  -------------------------------------------------------------
     public Teacher getTeacher() {
         return teacher;
     }
@@ -73,7 +77,6 @@ public class GroupEdu {
     public void setTeacher(Teacher teacher) {
         this.teacher = teacher;
     }
-    //функции для массива студентов  -------------------------------------------------------------
 
     public void setStudents(ArrayList<Student> students) {
         this.students = students;
@@ -83,28 +86,31 @@ public class GroupEdu {
         return students;
     }
 
-    //добавляет в конец массива
     public void addStudent(Student student) {
         this.students.add(student);
     }
 
-    //добавляет в указанное место
     public void addStudent(Student student, int position) {
         this.students.add(position, student);
     }
 
-    //удаляет из конца массива
+    public Student getStudent() {
+        return this.students.get(0);
+    }
+
+    public Student getStudent(int index) {
+        return this.students.get(index);
+    }
+
     public void deleteStudent() {
         int position = this.students.size() - 1;
         this.students.remove(position);
     }
 
-    //удаляет из указанного места
     public void deleteStudent(int position) {
         this.students.remove(position);
     }
 
-    //смена адреса студента и куратора внутри группы    ---------------------------------------------------------
     public void AddressChange(Person person, Address addr) {
         person.setAddr(addr);
     }
